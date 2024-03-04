@@ -1,0 +1,1264 @@
+Program.Sub.ScreenSU.Start
+gui.F_PrtCertEdit..create
+gui.F_PrtCertEdit..caption("Edit Lot Information")
+gui.F_PrtCertEdit..size(13710,4980)
+gui.F_PrtCertEdit..position(0,0)
+gui.F_PrtCertEdit..event(unload,f_prtcertedit_unload)
+gui.F_PrtCertEdit..alwaysontop(False)
+gui.F_PrtCertEdit..fontname("Arial")
+gui.F_PrtCertEdit..fontsize(8)
+gui.F_PrtCertEdit..forecolor(0)
+gui.F_PrtCertEdit..fontstyle(,,,,)
+gui.F_PrtCertEdit..BackColor(-2147483633)
+gui.F_PrtCertEdit..controlbox(True)
+gui.F_PrtCertEdit..maxbutton(False)
+gui.F_PrtCertEdit..minbutton(False)
+gui.F_PrtCertEdit..mousepointer(0)
+gui.F_PrtCertEdit..moveable(True)
+gui.F_PrtCertEdit..sizeable(False)
+gui.F_PrtCertEdit..ShowInTaskBar(True)
+gui.F_PrtCertEdit..titlebar(True)
+gui.F_PrtCertEdit.frm_Info.create(frame)
+gui.F_PrtCertEdit.frm_Info.caption("")
+gui.F_PrtCertEdit.frm_Info.size(3450,810)
+gui.F_PrtCertEdit.frm_Info.position(45,0)
+gui.F_PrtCertEdit.frm_Info.visible(True)
+gui.F_PrtCertEdit.frm_Info.fontname("Arial")
+gui.F_PrtCertEdit.frm_Info.fontsize(8)
+gui.F_PrtCertEdit.frmB.create(frame)
+gui.F_PrtCertEdit.frmB.caption("")
+gui.F_PrtCertEdit.frmB.size(4290,630)
+gui.F_PrtCertEdit.frmB.position(9090,3745)
+gui.F_PrtCertEdit.frmB.visible(True)
+gui.F_PrtCertEdit.frmB.fontname("Arial")
+gui.F_PrtCertEdit.frmB.fontsize(8)
+gui.F_PrtCertEdit.fgActLot.create(gsflexgrid)
+gui.F_PrtCertEdit.fgActLot.FixedRows(0)
+gui.F_PrtCertEdit.fgActLot.FixedCols(0)
+gui.F_PrtCertEdit.fgActLot.visible(True)
+gui.F_PrtCertEdit.fgActLot.size(13410,2865)
+gui.F_PrtCertEdit.fgActLot.zorder(0)
+gui.F_PrtCertEdit.fgActLot.position(10,900)
+gui.F_PrtCertEdit.fgActLot.enabled(True)
+gui.F_PrtCertEdit.fgActLot.event(mouseup,fgactlot_mouseup)
+gui.F_PrtCertEdit.fgActLot.event(checkclick,fgactlot_checkclick)
+gui.F_PrtCertEdit.lblPck.create(label,"Packing List:",True,990,255,1,200,200,True,0,Arial,8,-2147483633,0)
+gui.F_PrtCertEdit.lblPck.parent("frm_info")
+gui.F_PrtCertEdit.txtPck_No.create(textbox,"",True,1215,300,0,170,410,False,0,Arial,8,-2147483643,1)
+gui.F_PrtCertEdit.txtPck_No.parent("frm_info")
+gui.F_PrtCertEdit.lblOrder_no.create(label,"Order No:",True,825,255,1,1460,200,True,0,Arial,8,-2147483633,0)
+gui.F_PrtCertEdit.lblOrder_no.parent("frm_info")
+gui.F_PrtCertEdit.txtOrder_No.create(textbox,"",True,1215,300,0,1445,410,False,0,Arial,8,-2147483643,1)
+gui.F_PrtCertEdit.txtOrder_No.parent("frm_info")
+gui.F_PrtCertEdit.lblShip_no.create(label,"Ship No:",True,630,255,1,2720,200,True,0,Arial,8,-2147483633,0)
+gui.F_PrtCertEdit.lblShip_no.parent("frm_info")
+gui.F_PrtCertEdit.txtShip_No.create(textbox,"",True,630,300,0,2705,410,False,0,Arial,8,-2147483643,1)
+gui.F_PrtCertEdit.txtShip_No.parent("frm_info")
+gui.F_PrtCertEdit.cmdPrint.create(button)
+gui.F_PrtCertEdit.cmdPrint.caption("Print")
+gui.F_PrtCertEdit.cmdPrint.visible(True)
+gui.F_PrtCertEdit.cmdPrint.size(1300,375)
+gui.F_PrtCertEdit.cmdPrint.zorder(0)
+gui.F_PrtCertEdit.cmdPrint.position(1480,185)
+gui.F_PrtCertEdit.cmdPrint.enabled(True)
+gui.F_PrtCertEdit.cmdPrint.parent("frmb")
+gui.F_PrtCertEdit.cmdPrint.fontname("Arial")
+gui.F_PrtCertEdit.cmdPrint.fontsize(8)
+gui.F_PrtCertEdit.cmdPrint.event(click,cmdprint_click)
+gui.F_PrtCertEdit.cmdAddZip.create(button)
+gui.F_PrtCertEdit.cmdAddZip.caption("Add Zip - DCC")
+gui.F_PrtCertEdit.cmdAddZip.visible(True)
+gui.F_PrtCertEdit.cmdAddZip.size(1300,375)
+gui.F_PrtCertEdit.cmdAddZip.zorder(0)
+gui.F_PrtCertEdit.cmdAddZip.position(2875,185)
+gui.F_PrtCertEdit.cmdAddZip.enabled(True)
+gui.F_PrtCertEdit.cmdAddZip.parent("frmb")
+gui.F_PrtCertEdit.cmdAddZip.fontname("Arial")
+gui.F_PrtCertEdit.cmdAddZip.fontsize(8)
+gui.F_PrtCertEdit.cmdAddZip.event(click,cmdaddzip_click)
+gui.F_PrtCertEdit.cmdOpen.create(button)
+gui.F_PrtCertEdit.cmdOpen.caption("Open")
+gui.F_PrtCertEdit.cmdOpen.visible(True)
+gui.F_PrtCertEdit.cmdOpen.size(1300,375)
+gui.F_PrtCertEdit.cmdOpen.zorder(0)
+gui.F_PrtCertEdit.cmdOpen.position(65,185)
+gui.F_PrtCertEdit.cmdOpen.enabled(True)
+gui.F_PrtCertEdit.cmdOpen.parent("frmb")
+gui.F_PrtCertEdit.cmdOpen.fontname("Arial")
+gui.F_PrtCertEdit.cmdOpen.fontsize(8)
+gui.F_PrtCertEdit.cmdOpen.event(click,cmdopen_click)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Variable.Global.sOrder.Declare(String)
+Variable.Global.sOrderSuffix.Declare(String)
+Variable.Global.sPckNo.Declare(String)
+Variable.UDT.uLotEdit.Define("ORDER_REC",String,ORDER_REC)
+Variable.UDT.uLotEdit.Define("PART",String,PART)
+Variable.UDT.uLotEdit.Define("LOC",String,LOC)
+Variable.UDT.uLotEdit.Define("LOT",String,LOT)
+Variable.UDT.uLotEdit.Define("BIN",String,BIN)
+Variable.UDT.uLotEdit.Define("HEAT",String,HEAT)
+Variable.UDT.uLotEdit.Define("SERIAL",String,SERIAL)
+Variable.UDT.uLotEdit.Define("JOB",String,JOB)
+Variable.UDT.uLotEdit.Define("SUFFIX",String,SUFFIX)
+Variable.UDT.uLotEdit.Define("STAT",String,STAT)
+Variable.UDT.uLotEdit.Define("SEL",String,SEL)
+Variable.UDT.uLotEdit.Define("DCC",String)
+Variable.uGlobal.uLotEdit.Declare("uLotEdit")
+Variable.Global.sTargetFile.Declare(String)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+'Dev RRC
+
+'Hook 25910 - Populate -OES099 SCREEN
+'Hook 25982 - Script 2 -  OES099 SCREEN
+'Hook 25984 - Script 3 -  OES099 SCREEN
+'Hook 37810  - Populate - SHP205S SCREEN
+'Hook 37831 - Script 2 - SHP205S SCREEN
+'Hook 37832 - Script 3 - SHP205S SCREEN
+'Hook 28532 - Post Save - OES0FS Screen
+
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Control.SelectCase(V.Caller.Hook)
+
+	F.Intrinsic.Control.Case(25910)
+		' Populate Hook 25910  OES099 SCREEN
+		V.Passed.000205.Set("Retrieve Lot Info")
+		V.Passed.000210.Set("Edit Lot Info")
+
+	F.Intrinsic.Control.Case(37810)
+		'Populate Hook 37810  SHP205S SCREEN
+		V.Passed.000218.Set("Retrieve Lot Info")
+		V.Passed.000219.Set("Edit Lot Info")
+
+	F.Intrinsic.Control.Case(25982)
+		'Hook 25982  - Script 2 - OES099 SCREEN
+		F.Intrinsic.String.LPad(V.Passed.000150,"0",7,V.Global.sOrder)
+		F.Intrinsic.String.LPad(V.Passed.000003,"0",7,V.Global.sPckNo)
+		F.Intrinsic.String.LPad(V.Passed.000151,"0",4,V.Global.sOrderSuffix)
+		F.Intrinsic.Control.If(V.Global.sOrder,=,"0000000")
+			F.Intrinsic.Control.End
+
+		F.Intrinsic.Control.EndIf
+		F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+		F.Intrinsic.Control.CallSub(Prtcert2)
+
+	F.Intrinsic.Control.Case(25984)
+		'Hook 25984  - Script 3 - OES099 SCREEN
+		F.Intrinsic.String.LPad(V.Passed.000150,"0",7,V.Global.sOrder)
+		F.Intrinsic.String.LPad(V.Passed.000003,"0",7,V.Global.sPckNo)
+		F.Intrinsic.String.LPad(V.Passed.000151,"0",4,V.Global.sOrderSuffix)
+		F.Intrinsic.Control.If(V.Global.sOrder,=,"0000000")
+			F.Intrinsic.Control.End
+
+		F.Intrinsic.Control.EndIf
+		F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+		F.Intrinsic.Control.CallSub(Prtcert2edit)
+
+	F.Intrinsic.Control.Case(37831)
+		'Hook 37831  - Script 2 - SHP205S SCREEN
+		F.Intrinsic.String.LPad(V.Passed.000150,"0",7,V.Global.sOrder)
+		F.Intrinsic.String.LPad(V.Passed.000008,"0",7,V.Global.sPckNo)
+		F.Intrinsic.String.LPad(V.Passed.000151,"0",4,V.Global.sOrderSuffix)
+		F.Intrinsic.Control.If(V.Global.sOrder,=,"0000000")
+			F.Intrinsic.Control.End
+
+		F.Intrinsic.Control.EndIf
+		F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+		F.Intrinsic.Control.CallSub(Prtcert2)
+
+	F.Intrinsic.Control.Case(37832)
+		'Hook 37832  - Script 3 - SHP205S SCREEN
+		F.Intrinsic.String.LPad(V.Passed.000150,"0",7,V.Global.sOrder)
+		F.Intrinsic.String.LPad(V.Passed.000008,"0",7,V.Global.sPckNo)
+		F.Intrinsic.String.LPad(V.Passed.000151,"0",4,V.Global.sOrderSuffix)
+		F.Intrinsic.Control.If(V.Global.sOrder,=,"0000000")
+			F.Intrinsic.Control.End
+
+		F.Intrinsic.Control.EndIf
+		F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+		F.Intrinsic.Control.CallSub(Prtcert2edit)
+
+	F.Intrinsic.Control.Case(28532)
+		'Hook 28532  - Post Save - OES0FS SCREEN
+		V.Global.sOrder.Set(V.Passed.FIRST-ORDER)
+		V.Global.sOrderSuffix.Set(V.Passed.FIRST-SEQ)
+		F.Intrinsic.String.LPad(V.Passed.000168,"0",7,V.Global.sPckNo)
+		F.Intrinsic.Control.If(V.Global.sOrder,=,"0000000")
+			F.Intrinsic.Control.End
+
+		F.Intrinsic.Control.EndIf
+		F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+		F.Intrinsic.Control.CallSub(Prtcert2)
+
+	F.Intrinsic.Control.CaseElse
+		F.Intrinsic.Control.End
+
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3100_LOT_INFO.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Main.End
+
+Program.Sub.PrtCert2.Start
+F.Intrinsic.Control.SetErrorHandler("PrtCert2_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sSQL2.Declare(String)
+V.Local.sOrder_Rec.Declare(String)
+V.Local.sPart.Declare(String)
+V.Local.sLocation.Declare(String)
+V.Local.sLot.Declare(String)
+V.Local.sBin.Declare(String)
+V.Local.sHeat.Declare(String)
+V.Local.sSerial.Declare(String)
+V.Local.iID.Declare(Long)
+V.Local.iCodeChk.Declare(Long)
+V.Local.iCodeChk2.Declare(Long)
+
+V.Local.iCodeChk.Set(0)
+V.Local.iID.Set(1)
+
+'if custom field is set then make sure the customer exists, if not quit the program ( user will need to retrieve lot info instead)
+F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstChkAllCust","SELECT NAME FROM GCG_3100_LOT_CUST WHERE CUST = '000000' ")
+F.Intrinsic.Control.If(V.ODBC.conx!rstChkAllCust.EOF,=,"False")
+	F.Intrinsic.Control.If(V.ODBC.conx!rstChkAllCust.FieldValTrim!NAME,=,"C")
+		F.Intrinsic.String.Build("SELECT CUSTOMER FROM V_SHIPMENT_HEADER WHERE ORDER_NO = '{0}' AND ORDER_SUFFIX = '{1}' ",V.Global.sOrder,V.Global.sOrderSuffix,V.Local.sSQL2)
+		F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstGetCust",V.Local.sSQL2)
+		F.Intrinsic.Control.If(V.ODBC.conx!rstGetCust.EOF,=,"False")
+			F.Intrinsic.String.Build("SELECT * FROM GCG_3100_LOT_CUST WHERE CUST = '{0}' ",V.ODBC.conx!rstGetCust.FieldValTrim!CUSTOMER,V.Local.sSQL2)
+			F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstChkCust",V.Local.sSQL2)
+			F.Intrinsic.Control.If(V.ODBC.conx!rstChkCust.EOF,=,"True")
+				F.ODBC.conx!rstChkCust.Close
+				F.ODBC.conx!rstGetCust.Close
+				F.ODBC.conx!rstChkAllCust.Close
+				F.Intrinsic.Control.CallSub(F_prtcertedit_unload)
+			F.Intrinsic.Control.EndIf
+			F.ODBC.conx!rstChkCust.Close
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conx!rstGetCust.Close
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rstChkAllCust.Close
+'clears lbhs out for a fresh start
+F.Intrinsic.String.Build("DELETE FROM GCG_3100_LOT_LBHS WHERE TERMINAL = '{0}' ",V.Caller.Terminal,V.Local.sSQL)
+F.ODBC.Connection!conx.Execute(V.Local.sSql)
+
+'------------------------ Search on V_SHIPMENT_LINES View for Order and Suffix------------------------------------------------------------------------
+F.Intrinsic.String.Build("SELECT PART, LOCATION, ORDER_REC FROM V_SHIPMENT_LINES WHERE ORDER_NO = '{0}' AND ORDER_SUFFIX = '{1}' AND PART <> 'FREIGHT' ",V.Global.sOrder,V.Global.sOrderSuffix,V.Local.sSQL)
+F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstShipLn",V.Local.sSQL)
+F.Intrinsic.Control.DoUntil(V.ODBC.conx!rstShipLn.EOF,=,"True")
+	V.Local.sPart.Set(V.ODBC.conx!rstShipLn.FieldVal!PART)
+	V.Local.sLocation.Set(V.ODBC.conx!rstShipLn.FieldVal!LOCATION)
+	V.Local.sOrder_Rec.Set(V.ODBC.conx!rstShipLn.FieldVal!ORDER_REC)
+'------------------------ Search on ORDER_HIST_LOT View for Order and Suffix------------------------------------------------------------------------
+	F.Intrinsic.String.Build("SELECT LOT, BIN, HEAT, SERIAL FROM ORDER_HIST_LOT WHERE ORDER_NO = '{0}' AND ORDER_SUFFIX = '{1}' AND ORDER_LINE = '{2}' ",V.Global.sOrder,V.Global.sOrderSuffix,V.Local.sOrder_Rec,V.Local.sSQL)
+	F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstOrdHistLot",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.conx!rstOrdHistLot.EOF,=,"TRUE")
+		F.Intrinsic.UI.Msgbox("No records found.","Mat Cert Pack")
+		F.ODBC.conx!rstOrdHistLot.Close
+		F.ODBC.conx!rstShipLn.Close
+		F.Intrinsic.Control.CallSub(F_prtcertedit_unload)
+	F.Intrinsic.Control.EndIf
+	V.Local.sLot.Set(V.ODBC.conx!rstOrdHistLot.FieldVal!LOT)
+	V.Local.sBin.Set(V.ODBC.conx!rstOrdHistLot.FieldVal!BIN)
+	V.Local.sHeat.Set(V.ODBC.conx!rstOrdHistLot.FieldVal!HEAT)
+	V.Local.sSerial.Set(V.ODBC.conx!rstOrdHistLot.FieldVal!SERIAL)
+	F.ODBC.conx!rstOrdHistLot.Close
+
+'------------------------ Search on V_ITEM_HISTORY View for Part, Location, Lot, Bin, Heat, Serial------------------------------------------------------------------------
+	F.Intrinsic.String.Build("SELECT DISTINCT CODE_TRANSACTION, JOB, SUFFIX, SEQUENCE FROM V_ITEM_HISTORY WHERE PART = '{0}' AND LOCATION = '{1}' AND LOT = '{2}' AND BIN = '{3}' AND HEAT = '{4}' AND SERIAL_NUMBER = '{5}' ",V.Local.sPart,V.Local.sLocation,V.Local.sLot,V.Local.sBin,V.Local.sHeat,V.Local.sSerial,V.Local.sSQL)
+	F.Intrinsic.String.Build("{0}AND (CODE_TRANSACTION = 'J52' OR CODE_TRANSACTION = 'J55' OR CODE_TRANSACTION = 'S52' OR CODE_TRANSACTION = 'C52' OR CODE_TRANSACTION = 'R10' OR CODE_TRANSACTION = 'R11') ",V.Local.sSQL,V.Local.sSQL)
+	F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstItmHis",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.conx!rstItmHis.EOF,=,"FALSE")
+		F.Intrinsic.String.Build("SELECT * FROM GCG_3100_LOT_LBHS WHERE TERMINAL = '{0}' ",V.Caller.Terminal,V.Local.sSQL)
+		F.ODBC.Connection!conx.OpenLocalRecordsetRW("rstPrtTemp",V.Local.sSQL)
+		F.Intrinsic.Control.DoUntil(V.ODBC.conx!rstItmHis.EOF,=,"TRUE")
+			F.ODBC.conx!rstPrtTemp.AddNew
+			F.ODBC.conx!rstPrtTemp.Set!Terminal(V.Caller.Terminal)
+			F.ODBC.conx!rstPrtTemp.Set!ID(V.Local.iID)
+			F.ODBC.conx!rstPrtTemp.Set!PART(V.Local.sPart)
+			F.ODBC.conx!rstPrtTemp.Set!LOCATION(V.Local.sLocation)
+			F.ODBC.conx!rstPrtTemp.Set!LOT(V.Local.sLot)
+			F.ODBC.conx!rstPrtTemp.Set!BIN(V.Local.sBin)
+			F.ODBC.conx!rstPrtTemp.Set!HEAT(V.Local.sHeat)
+			F.ODBC.conx!rstPrtTemp.Set!SERIAL(V.Local.sSerial)
+			F.ODBC.conx!rstPrtTemp.Set!JOB(V.ODBC.conx!rstItmHis.FieldVal!JOB)
+			F.ODBC.conx!rstPrtTemp.Set!SUFFIX(V.ODBC.conx!rstItmHis.FieldVal!SUFFIX)
+			F.ODBC.conx!rstPrtTemp.Set!CODE_TRANSACTION(V.ODBC.conx!rstItmHis.FieldVal!CODE_TRANSACTION)
+			F.ODBC.conx!rstPrtTemp.Set!SEQUENCE(V.ODBC.conx!rstItmHis.FieldVal!SEQUENCE)
+			F.ODBC.conx!rstPrtTemp.Set!ORDER_REC(V.Local.sOrder_Rec)
+			F.ODBC.conx!rstPrtTemp.Set!CHK("N")
+			F.ODBC.conx!rstPrtTemp.Update
+			F.Intrinsic.Math.Add(V.Local.iID,1,V.Local.iID)
+			F.ODBC.conx!rstItmHis.MoveNext
+		F.Intrinsic.Control.Loop
+		F.ODBC.conx!rstPrtTemp.Close
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conx!rstItmHis.Close
+
+
+'----------------------- Search on GCG_3100_LOT_LBHS ----
+	F.Intrinsic.Control.Do
+		F.Intrinsic.String.Build("SELECT * FROM GCG_3100_LOT_LBHS WHERE CHK = 'N' AND TERMINAL = '{0}' order by ID ",V.Caller.Terminal,V.Local.sSQL)
+		F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstItmHisLoop",V.Local.sSQL)
+		F.Intrinsic.Control.If(V.ODBC.conx!rstItmHisLoop.EOF,=,True)
+			F.ODBC.conx!rstItmHisLoop.Close
+			F.Intrinsic.Control.ExitDo
+		F.Intrinsic.Control.EndIf
+
+		'----------------------- Check status of the Line used --------
+		F.Intrinsic.String.Build("SELECT * FROM GCG_3100_LOT_LBHS WHERE TERMINAL = '{0}' AND ID = '{1}' ",V.Caller.Terminal,V.ODBC.conx!rstItmHisLoop.FieldVal!ID,V.Local.sSQL)
+		F.ODBC.Connection!conx.OpenLocalRecordsetRW("rstupdID",V.Local.sSQL)
+		F.ODBC.conx!rstupdID.Set!CHK("Y")
+		F.ODBC.conx!rstupdID.Update
+		F.ODBC.conx!rstupdID.Close
+
+		F.Intrinsic.Control.If(V.ODBC.conx!rstItmHisLoop.FieldVal!SEQUENCE,>=,990000)
+			F.Intrinsic.Control.If(V.ODBC.conx!rstItmHisLoop.FieldVal!CODE_TRANSACTION,=,"J52")
+				V.Local.iCodeChk.Set(1)
+			F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.If(V.ODBC.conx!rstItmHisLoop.FieldVal!CODE_TRANSACTION,=,"S52")
+				V.Local.iCodeChk.Set(1)
+			F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.If(V.ODBC.conx!rstItmHisLoop.FieldVal!CODE_TRANSACTION,=,"C52")
+				V.Local.iCodeChk.Set(1)
+			F.Intrinsic.Control.EndIf
+
+			'select where codes are j52, j55, s52, c52, r10, or r11
+			F.Intrinsic.Control.If(V.Local.iCodeChk,=,1)
+				F.Intrinsic.String.Build("SELECT * FROM V_ITEM_HISTORY WHERE JOB = '{0}' AND SUFFIX = '{1}' AND (CODE_TRANSACTION='J52' OR CODE_TRANSACTION='J55' OR CODE_TRANSACTION='S52' OR CODE_TRANSACTION='C52' OR CODE_TRANSACTION='R10' OR CODE_TRANSACTION='R11') ",V.ODBC.conx!rstItmHisLoop.FieldVal!JOB,V.ODBC.conx!rstItmHisLoop.FieldVal!SUFFIX,V.Local.sSQL2)
+				F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstPrtTjobs",V.Local.sSQL2)
+				F.Intrinsic.Control.If(V.ODBC.conx!rstPrtTjobs.EOF,=,"FALSE")
+					F.Intrinsic.Control.DoUntil(V.ODBC.conx!rstPrtTjobs.EOF,=,"TRUE")
+						F.Intrinsic.String.Build("SELECT * FROM GCG_3100_LOT_LBHS WHERE TERMINAL = '{0}' AND PART = '{1}' AND LOCATION = '{2}' ",V.Caller.Terminal,V.ODBC.conx!rstPrtTjobs.FieldValRTrim!PART,V.ODBC.conx!rstPrtTjobs.FieldValRTrim!LOCATION,V.Local.sSQL2)
+
+				'The cardinality of the items being built into the string below was incorrect. FQ
+						F.Intrinsic.String.Build("{0}AND LOT = '{1}' AND BIN = '{2}' AND HEAT = '{3}' AND SERIAL = '{4}' ",V.Local.sSQL2,V.ODBC.conx!rstPrtTjobs.FieldValRTrim!LOT,V.ODBC.conx!rstPrtTjobs.FieldValRTrim!BIN,V.ODBC.conx!rstPrtTjobs.FieldValRTrim!HEAT,V.ODBC.conx!rstPrtTjobs.FieldValRTrim!SERIAL_NUMBER,V.Local.sSQL2)
+						F.Intrinsic.String.Build("{0}AND SEQUENCE = '{1}' AND JOB = '{2}' AND SUFFIX = '{3}' ",V.Local.sSQL2,V.ODBC.conx!rstPrtTjobs.FieldValRTrim!SEQUENCE,V.ODBC.conx!rstPrtTjobs.FieldValRTrim!JOB,V.ODBC.conx!rstPrtTjobs.FieldValRTrim!SUFFIX,V.Local.sSQL2)
+						F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstchk",V.Local.sSQL2)
+						F.Intrinsic.Control.If(V.ODBC.conx!rstchk.BOF,=,"TRUE")
+							F.Intrinsic.String.Build("SELECT * FROM GCG_3100_LOT_LBHS WHERE TERMINAL = '{0}' ",V.Caller.Terminal,V.Local.sSQL)
+							F.ODBC.Connection!conx.OpenLocalRecordsetRW("rstPrtTTjobs",V.Local.sSQL)
+							F.ODBC.conx!rstPrtTTjobs.AddNew
+							F.ODBC.conx!rstPrtTTjobs.Set!Terminal(V.Caller.Terminal)
+							F.ODBC.conx!rstPrtTTjobs.Set!ID(V.Local.iID)
+							F.ODBC.conx!rstPrtTTjobs.Set!PART(V.ODBC.conx!rstPrtTjobs.FieldVal!PART)
+							F.ODBC.conx!rstPrtTTjobs.Set!LOCATION(V.ODBC.conx!rstPrtTjobs.FieldVal!LOCATION)
+							F.ODBC.conx!rstPrtTTjobs.Set!LOT(V.ODBC.conx!rstPrtTjobs.FieldVal!LOT)
+							F.ODBC.conx!rstPrtTTjobs.Set!BIN(V.ODBC.conx!rstPrtTjobs.FieldVal!BIN)
+							F.ODBC.conx!rstPrtTTjobs.Set!HEAT(V.ODBC.conx!rstPrtTjobs.FieldVal!HEAT)
+							F.ODBC.conx!rstPrtTTjobs.Set!SERIAL(V.ODBC.conx!rstPrtTjobs.FieldVal!SERIAL_NUMBER)
+							F.ODBC.conx!rstPrtTTjobs.Set!JOB(V.ODBC.conx!rstPrtTjobs.FieldVal!JOB)
+							F.ODBC.conx!rstPrtTTjobs.Set!SUFFIX(V.ODBC.conx!rstPrtTjobs.FieldVal!SUFFIX)
+							F.ODBC.conx!rstPrtTTjobs.Set!CODE_TRANSACTION(V.ODBC.conx!rstPrtTjobs.FieldVal!CODE_TRANSACTION)
+							F.ODBC.conx!rstPrtTTjobs.Set!SEQUENCE(V.ODBC.conx!rstPrtTjobs.FieldVal!SEQUENCE)
+							F.ODBC.conx!rstPrtTTjobs.Set!ORDER_REC(V.Local.sOrder_Rec)
+							F.ODBC.conx!rstPrtTTjobs.Set!CHK("N")
+							F.Intrinsic.Math.Add(V.Local.iID,1,V.Local.iID)
+							F.ODBC.conx!rstPrtTTjobs.Update
+							F.ODBC.conx!rstPrtTTjobs.Close
+						F.Intrinsic.Control.EndIf
+						F.ODBC.conx!rstchk.Close
+						F.ODBC.conx!rstPrtTjobs.MoveNext
+					F.Intrinsic.Control.Loop
+				F.Intrinsic.Control.EndIf
+				F.ODBC.conx!rstPrtTjobs.Close
+			F.Intrinsic.Control.EndIf
+
+'----------------------------------Set codecheck2 based on code-------------------------------------------------------------------------------------------
+			V.Local.iCodeChk2.Set(0)
+			F.Intrinsic.Control.If(V.ODBC.conx!rstItmHisLoop.FieldVal!CODE_TRANSACTION,=,"J55")
+				V.Local.iCodeChk2.Set(1)
+			F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.If(V.ODBC.conx!rstItmHisLoop.FieldVal!CODE_TRANSACTION,=,"R10")
+				V.Local.iCodeChk2.Set(1)
+			F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.If(V.ODBC.conx!rstItmHisLoop.FieldVal!CODE_TRANSACTION,=,"R11")
+				V.Local.iCodeChk2.Set(1)
+			F.Intrinsic.Control.EndIf
+			'a code is selected add it to the table
+			F.Intrinsic.Control.If(V.Local.iCodeChk2,=,1)
+				F.Intrinsic.String.Build("SELECT * FROM V_ITEM_HISTORY WHERE PART = '{0}' AND LOCATION = '{1}' AND LOT = '{2}' AND BIN = '{3}' ",V.ODBC.conx!rstItmHisLoop.FieldValRTrim!PART,V.ODBC.conx!rstItmHisLoop.FieldValRTrim!LOCATION,V.ODBC.conx!rstItmHisLoop.FieldValRTrim!LOT,V.ODBC.conx!rstItmHisLoop.FieldValRTrim!BIN,V.Local.sSQL2)
+				F.Intrinsic.String.Build("{0}AND HEAT = '{1}' AND SERIAL_NUMBER = '{2}' ",V.Local.sSQL2,V.ODBC.conx!rstItmHisLoop.FieldValRTrim!HEAT,V.ODBC.conx!rstItmHisLoop.FieldValRTrim!SERIAL,V.Local.sSQL2)
+				F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstPrtTjobs",V.Local.sSQL2)
+				F.Intrinsic.Control.If(V.ODBC.conx!rstPrtTjobs.EOF,=,"FALSE")
+					F.Intrinsic.Control.DoUntil(V.ODBC.conx!rstPrtTjobs.EOF,=,"TRUE")
+						F.Intrinsic.String.Build("SELECT * FROM GCG_3100_LOT_LBHS WHERE TERMINAL = '{0}' AND PART = '{1}' AND LOCATION = '{2}' AND LOT = '{3}' ",V.Caller.Terminal,V.ODBC.conx!rstPrtTjobs.FieldValRTrim!PART,V.ODBC.conx!rstPrtTjobs.FieldValRTrim!LOCATION,V.ODBC.conx!rstPrtTjobs.FieldValRTrim!LOT,V.Local.sSQL2)
+						F.Intrinsic.String.Build("{0}AND BIN = '{1}' AND HEAT = '{2}' AND SERIAL = '{3}' AND SEQUENCE = '{4}' ",V.Local.sSQL2,V.ODBC.conx!rstPrtTjobs.FieldValRTrim!BIN,V.ODBC.conx!rstPrtTjobs.FieldValRTrim!HEAT,V.ODBC.conx!rstPrtTjobs.FieldValRTrim!SERIAL_NUMBER,V.ODBC.conx!rstPrtTjobs.FieldValRTrim!SEQUENCE,V.Local.sSQL2)
+						F.Intrinsic.String.Build("{0}AND JOB = '{1}' AND SUFFIX = '{2}' ",V.Local.sSQL2,V.ODBC.conx!rstPrtTjobs.FieldValRTrim!JOB,V.ODBC.conx!rstPrtTjobs.FieldValRTrim!SUFFIX,V.Local.sSQL2)
+						F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstchk",V.Local.sSQL2)
+						F.Intrinsic.Control.If(V.ODBC.conx!rstchk.BOF,=,"TRUE")
+							F.Intrinsic.String.Build("SELECT * FROM GCG_3100_LOT_LBHS WHERE TERMINAL = '{0}' ",V.Caller.Terminal,V.Local.sSQL)
+							F.ODBC.Connection!conx.OpenLocalRecordsetRW("rstPrtTTjobs",V.Local.sSQL)
+							F.ODBC.conx!rstPrtTTjobs.AddNew
+							F.ODBC.conx!rstPrtTTjobs.Set!Terminal(V.Caller.Terminal)
+							F.ODBC.conx!rstPrtTTjobs.Set!ID(V.Local.iID)
+							F.ODBC.conx!rstPrtTTjobs.Set!PART(V.ODBC.conx!rstPrtTjobs.FieldVal!PART)
+							F.ODBC.conx!rstPrtTTjobs.Set!LOCATION(V.ODBC.conx!rstPrtTjobs.FieldVal!LOCATION)
+							F.ODBC.conx!rstPrtTTjobs.Set!LOT(V.ODBC.conx!rstPrtTjobs.FieldVal!LOT)
+							F.ODBC.conx!rstPrtTTjobs.Set!BIN(V.ODBC.conx!rstPrtTjobs.FieldVal!BIN)
+							F.ODBC.conx!rstPrtTTjobs.Set!HEAT(V.ODBC.conx!rstPrtTjobs.FieldVal!HEAT)
+							F.ODBC.conx!rstPrtTTjobs.Set!SERIAL(V.ODBC.conx!rstPrtTjobs.FieldVal!SERIAL_NUMBER)
+							F.ODBC.conx!rstPrtTTjobs.Set!JOB(V.ODBC.conx!rstPrtTjobs.FieldVal!JOB)
+							F.ODBC.conx!rstPrtTTjobs.Set!SUFFIX(V.ODBC.conx!rstPrtTjobs.FieldVal!SUFFIX)
+							F.ODBC.conx!rstPrtTTjobs.Set!CODE_TRANSACTION(V.ODBC.conx!rstPrtTjobs.FieldVal!CODE_TRANSACTION)
+							F.ODBC.conx!rstPrtTTjobs.Set!SEQUENCE(V.ODBC.conx!rstPrtTjobs.FieldVal!SEQUENCE)
+							F.ODBC.conx!rstPrtTTjobs.Set!ORDER_REC(V.Local.sOrder_Rec)
+							F.ODBC.conx!rstPrtTTjobs.Set!CHK("N")
+							F.Intrinsic.Math.Add(V.Local.iID,1,V.Local.iID)
+							F.ODBC.conx!rstPrtTTjobs.Update
+							F.ODBC.conx!rstPrtTTjobs.Close
+						F.Intrinsic.Control.EndIf
+						F.ODBC.conx!rstchk.Close
+						F.ODBC.conx!rstPrtTjobs.MoveNext
+					F.Intrinsic.Control.Loop
+				F.Intrinsic.Control.EndIf
+				F.ODBC.conx!rstPrtTjobs.Close
+			F.Intrinsic.Control.EndIf
+
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conx!rstItmHisLoop.Close
+	F.Intrinsic.Control.Loop
+
+	F.ODBC.conx!rstShipLn.MoveNext
+F.Intrinsic.Control.Loop
+F.ODBC.conx!rstShipLn.Close
+
+F.Intrinsic.Control.CallSub(Prtcert2mainp)
+
+F.Intrinsic.Control.CallSub(Prtcert2save)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("PrtCert2_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3100_LOT_INFO.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_prtcertedit_unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.PrtCert2.End
+
+Program.Sub.PrtCert2Save.Start
+F.Intrinsic.Control.SetErrorHandler("PrtCert2Save_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sLinkID.Declare(String)
+V.Local.iLinkID.Declare(Long)
+V.Local.sPart.Declare(String)
+V.Local.sLoc.Declare(String)
+V.Local.sLot.Declare(String)
+V.Local.sBIN.Declare(String)
+V.Local.sHeat.Declare(String)
+V.Local.sSerial.Declare(String)
+V.Local.sPart2.Declare(String)
+V.Local.sLoc2.Declare(String)
+V.Local.sLot2.Declare(String)
+V.Local.sBIN2.Declare(String)
+V.Local.sHeat2.Declare(String)
+V.Local.sSerial2.Declare(String)
+V.Local.sOrder_Rec.Declare(String)
+V.Local.sJob.Declare(String)
+V.Local.sSuffix.Declare(String)
+V.Local.iFlag.Declare(String)
+V.Local.sStat.Declare(String)
+V.Local.iC.Declare(Long)
+
+
+'------------------------ Search on GCG_3100_LOT_LBHS for Records to Save in GCG_3100_LOT_INFO------------------------------------------------------------------------
+	F.Intrinsic.String.Build("DELETE FROM GCG_3100_LOT_INFO WHERE PCK_NO = '{0}' AND ORDER_NO = '{1}' AND ORDER_SHIP_NO = '{2}' ",V.Global.sPckNo,V.Global.sOrder,V.Global.sOrderSuffix,V.Local.sSql)
+	F.ODBC.Connection!conx.Execute(V.Local.sSQL)
+
+	F.Intrinsic.String.Build("SELECT * FROM GCG_3100_LOT_LBHS WHERE TERMINAL = '{0}' ",V.Caller.Terminal,V.Local.sSql)
+	F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstItemLot",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.conx!rstItemLot.EOF,=,"True")
+		F.Intrinsic.UI.Msgbox("No records found.","Mat Cert Pack")
+		F.Intrinsic.Control.End
+
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.DoUntil(V.ODBC.conx!rstItemLot.EOF,=,"True")
+		F.Intrinsic.Control.If(V.ODBC.Conx!rstItemLot.FieldVal!SEQUENCE,<,999999)
+			V.Local.iFlag.Set(1)
+		F.Intrinsic.Control.Elseif(V.ODBC.Conx!rstItemLot.FieldValTrim!ID,=,"1")
+			V.Local.iFlag.Set(1)
+		F.Intrinsic.Control.Else
+			V.Local.iFlag.Set(0)
+		F.Intrinsic.Control.EndIf
+
+		F.Intrinsic.Control.If(V.Local.iFlag,=,1)
+			V.Local.sPart.Set(V.ODBC.conx!rstItemLot.FieldValTrim!PART)
+			V.Local.sLoc.Set(V.ODBC.conx!rstItemLot.FieldValTrim!LOCATION)
+			V.Local.sLot.Set(V.ODBC.conx!rstItemLot.FieldValTrim!LOT)
+			V.Local.sBin.Set(V.ODBC.conx!rstItemLot.FieldValTrim!BIN)
+			V.Local.sHEAT.Set(V.ODBC.conx!rstItemLot.FieldValTrim!HEAT)
+			V.Local.sSerial.Set(V.ODBC.conx!rstItemLot.FieldValTrim!SERIAL)
+			V.Local.sOrder_Rec.Set(V.ODBC.conx!rstItemLot.FieldValTrim!ORDER_REC)
+			V.Local.sJob.Set(V.ODBC.conx!rstItemLot.FieldValTrim!JOB)
+			V.Local.sSuffix.Set(V.ODBC.conx!rstItemLot.FieldValTrim!SUFFIX)
+
+			F.Intrinsic.String.RPad(V.Local.sPart," ",20,V.Local.sPart2)
+			F.Intrinsic.String.RPad(V.Local.sLoc," ",2,V.Local.sLoc2)
+			F.Intrinsic.String.RPad(V.Local.sLot," ",15,V.Local.sLot2)
+			F.Intrinsic.String.RPad(V.Local.sBin," ",6,V.Local.sBin2)
+			F.Intrinsic.String.RPad(V.Local.sHEAT," ",15,V.Local.sHEAT2)
+			F.Intrinsic.String.RPad(V.Local.sSerial," ",30,V.Local.sSerial2)
+			F.Intrinsic.String.Build("{0}{1}{2}{3}{4}{5}",V.Local.sPart2,V.Local.sLoc2,V.Local.sLot2,V.Local.sBIN2,V.Local.sHeat2,V.Local.sSerial2,V.Local.sLinkID)
+
+			F.Global.DocumentControl.GetLinkID(V.Local.sLinkID,31,V.Local.iLinkID)
+			F.Intrinsic.String.Build("SELECT PATH, FILE FROM ATG_DOC_ASSOC WHERE LINK_ID = '{0}' ",V.Local.iLinkID,V.Local.sSql)
+			F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstLFile",V.Local.sSQL)
+			F.Intrinsic.Control.If(V.ODBC.Conx!rstLFile.EOF,=,"False")
+				V.uGlobal.uLotEdit.RedimPreserve(0,V.Local.iC)
+				V.uGlobal.uLotEdit(V.Local.iC)!SEL.Set("1")
+				V.Local.sStat.Set("1")
+			F.Intrinsic.Control.Else
+				V.Local.sStat.Set("")
+			F.Intrinsic.Control.EndIf
+			F.ODBC.conx!rstLFile.Close
+
+			V.Local.sSql.Set("SELECT * FROM GCG_3100_LOT_INFO")
+			F.ODBC.Connection!conx.OpenLocalRecordsetRW("rstLotSave",V.Local.sSQL)
+			F.ODBC.conx!rstLotSave.AddNew
+			F.ODBC.conx!rstLotSave.Set!PCK_NO(V.Global.sPckNo)
+			F.ODBC.conx!rstLotSave.Set!ORDER_NO(V.Global.sOrder)
+			F.ODBC.conx!rstLotSave.Set!ORDER_SHIP_NO(V.Global.sOrderSuffix)
+			F.ODBC.conx!rstLotSave.Set!ORDER_REC(V.Local.sOrder_Rec)
+			F.ODBC.conx!rstLotSave.Set!PART(V.Local.sPart)
+			F.ODBC.conx!rstLotSave.Set!LOC(V.Local.sLoc)
+			F.ODBC.conx!rstLotSave.Set!LOT(V.Local.sLot)
+			F.ODBC.conx!rstLotSave.Set!BIN(V.Local.sBin)
+			F.ODBC.conx!rstLotSave.Set!HEAT(V.Local.sHeat)
+			F.ODBC.conx!rstLotSave.Set!SERIAL(V.Local.sSerial)
+			F.ODBC.conx!rstLotSave.Set!JOB(V.Local.sJob)
+			F.ODBC.conx!rstLotSave.Set!SUFFIX(V.Local.sSuffix)
+			F.ODBC.conx!rstLotSave.Set!STAT(V.Local.sStat)
+			F.ODBC.conx!rstLotSave.Update
+			F.ODBC.conx!rstLotSave.Close
+
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conx!rstItemLot.MoveNext
+		F.Intrinsic.Math.Add(V.Local.iC,1,V.Local.iC)
+	F.Intrinsic.Control.Loop
+	F.ODBC.conx!rstItemLot.Close
+
+	F.Intrinsic.Control.CallSub(Prtcert2edit)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("PrtCert2Save_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3100_LOT_INFO.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_prtcertedit_unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.PrtCert2Save.End
+
+Program.Sub.subBuildStyles_fgLot.Start
+F.Intrinsic.Control.SetErrorHandler("subBuildStyles_fgLot_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'Define Build Styles for Flex Grid fgLot
+'Define Number of Columns and Fixed Columns in Flex Grid
+'Fixed Column for Row Number
+Gui.F_PrtCertEdit.fgActLot.Cols(12)
+'Temp Set Row Count to 2 (So that Column Header can be Defined)
+'If No Data is Found Latter... Rows will Remain at 1 for the Fixed Header
+Gui.F_PrtCertEdit.fgActLot.Rows(2)
+Gui.F_PrtCertEdit.fgActLot.FixedRows(1)
+
+'Row Number Column (Dynamic)
+Gui.F_PrtCertEdit.fgActLot.TextMatrix(0,0,"Prt")
+Gui.F_PrtCertEdit.fgActLot.ColWidth(0,350)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,0,"type","locked",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,0,"fontstyle","bold",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,0,"Format","alignment",4)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(2,0,"type","Checkbox",False)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(2,0,"Format","alignment",4)
+
+'Order_Rec
+Gui.F_PrtCertEdit.fgActLot.TextMatrix(1,0,"Record")
+Gui.F_PrtCertEdit.fgActLot.ColWidth(1,700)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,1,"type","locked",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,1,"fontstyle","bold",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,1,"Format","alignment",4)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(2,1,"type","locked",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(2,1,"Format","alignment",4)
+
+'Part
+Gui.F_PrtCertEdit.fgActLot.TextMatrix(2,0,"Part")
+Gui.F_PrtCertEdit.fgActLot.ColWidth(2,2000)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,2,"type","locked",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,2,"fontstyle","bold",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,2,"Format","alignment",4)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(2,2,"type","locked",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(2,2,"Format","alignment",4)
+
+'Loc
+Gui.F_PrtCertEdit.fgActLot.TextMatrix(3,0,"Loc")
+Gui.F_PrtCertEdit.fgActLot.ColWidth(3,350)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,3,"type","locked",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,3,"fontstyle","bold",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,3,"Format","alignment",4)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(2,3,"type","locked",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(2,3,"Format","alignment",4)
+
+'Lot
+Gui.F_PrtCertEdit.fgActLot.TextMatrix(4,0,"Lot")
+Gui.F_PrtCertEdit.fgActLot.ColWidth(4,1700)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,4,"type","locked",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,4,"fontstyle","bold",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,4,"Format","alignment",4)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(2,4,"type","locked",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(2,4,"Format","alignment",4)
+
+'BIN
+Gui.F_PrtCertEdit.fgActLot.TextMatrix(5,0,"BIN")
+Gui.F_PrtCertEdit.fgActLot.ColWidth(5,900)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,5,"type","locked",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,5,"fontstyle","bold",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,5,"Format","alignment",4)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(2,5,"type","locked",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(2,5,"Format","alignment",4)
+
+'HEAT
+Gui.F_PrtCertEdit.fgActLot.TextMatrix(6,0,"HEAT")
+Gui.F_PrtCertEdit.fgActLot.ColWidth(6,1700)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,6,"type","locked",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,6,"fontstyle","bold",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,6,"Format","alignment",4)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(2,6,"type","locked",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(2,6,"Format","alignment",4)
+
+'Serial
+Gui.F_PrtCertEdit.fgActLot.TextMatrix(7,0,"Serial")
+Gui.F_PrtCertEdit.fgActLot.ColWidth(7,2800)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,7,"type","locked",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,7,"fontstyle","bold",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,7,"Format","alignment",4)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(2,7,"type","locked",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(2,7,"Format","alignment",4)
+
+'Job
+Gui.F_PrtCertEdit.fgActLot.TextMatrix(8,0,"Job")
+Gui.F_PrtCertEdit.fgActLot.ColWidth(8,700)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,8,"type","locked",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,8,"fontstyle","bold",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,8,"Format","alignment",4)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(2,8,"type","locked",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(2,8,"Format","alignment",4)
+
+'Suffix
+Gui.F_PrtCertEdit.fgActLot.TextMatrix(9,0,"Suffix")
+Gui.F_PrtCertEdit.fgActLot.ColWidth(9,550)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,9,"type","locked",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,9,"fontstyle","bold",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,9,"Format","alignment",4)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(2,9,"type","locked",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(2,9,"Format","alignment",4)
+
+'DCC link
+Gui.F_PrtCertEdit.fgActLot.TextMatrix(10,0,"DCC")
+Gui.F_PrtCertEdit.fgActLot.ColWidth(10,700)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,10,"type","locked",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,10,"fontstyle","bold",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,10,"Format","alignment",4)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(2,10,"type","locked",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(2,10,"Format","alignment",4)
+
+'Status
+Gui.F_PrtCertEdit.fgActLot.TextMatrix(11,0,"Status")
+Gui.F_PrtCertEdit.fgActLot.ColWidth(11,700)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,11,"type","locked",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,11,"fontstyle","bold",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(1,11,"Format","alignment",4)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(2,11,"type","locked",True)
+Gui.F_PrtCertEdit.fgActLot.BuildStyle(2,11,"Format","alignment",4)
+
+
+'Cell selection moves Down after hitting enter...
+Gui.F_PrtCertEdit.fgActLot.SetProperty("Enter",0)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("subBuildStyles_fgLot_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3100_LOT_INFO.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_prtcertedit_unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.subBuildStyles_fgLot.End
+
+Program.Sub.PrtCert2Edit.Start
+F.Intrinsic.Control.SetErrorHandler("PrtCert2Edit_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+
+'build flexgrid and get ready for displaying information on the screen
+F.Intrinsic.Control.CallSub(Subbuildstyles_fglot)
+Gui.F_PrtCertEdit..Show
+Gui.F_PrtCertEdit.fgActLot.Enabled(False)
+Gui.F_PrtCertEdit.fgActLot.Visible(False)
+Gui.F_PrtCertEdit.txtPck_No.Text(V.Global.sPckNo)
+Gui.F_PrtCertEdit.txtOrder_No.Text(V.Global.sOrder)
+Gui.F_PrtCertEdit.txtShip_No.Text(V.Global.sOrderSuffix)
+V.Local.sSql.Set("Select CASE WHEN Stat='1' THEN '1' WHEN Stat='D' THEN '1' ELSE '' END AS SEL, LEFT(ORDER_REC,3) AS ORDER_REC, PART, LOC, LOT, BIN, HEAT, SERIAL, JOB, SUFFIX,CASE WHEN Stat='1' THEN 'Print' ELSE '' END AS STAT FROM GCG_3100_LOT_INFO")
+F.Intrinsic.String.Build("{0} WHERE PCK_NO = '{1}' AND ORDER_NO = '{2}' AND ORDER_SHIP_NO = '{3}' ",V.Local.sSql,V.Global.sPckNo,V.Global.sOrder,V.Global.sOrderSuffix,V.Local.sSql)
+F.ODBC.Connection!Conx.OpenLocalRecordsetRO("rstOpenLot",V.Local.sSql)
+'load udt from recordset
+F.Intrinsic.Variable.LoadUDTFromRecordset("Conx","rstOpenLot","V.uGlobal.uLotEdit",False)
+F.Intrinsic.Control.CallSub(Subudt_dccfill)
+Gui.F_PrtCertEdit.fgActLot.ApplyStyle(0,1)
+Gui.F_PrtCertEdit.fgActLot.Rows(2)
+Gui.F_PrtCertEdit.fgActLot.FixedRows(1)
+'populate grid with udt
+Gui.F_PrtCertEdit.fgActLot.LoadFromUDT("uGlobal.uLotEdit","SEL::0*!*ORDER_REC::1*!*PART::2*!*LOC::3*!*LOT::4*!*BIN::5*!*HEAT::6*!*SERIAL::7*!*JOB::8*!*SUFFIX::9*!*DCC::10*!*STAT::11",2)
+F.ODBC.conx!rstOpenLot.Close
+
+Gui.F_PrtCertEdit.fgActLot.Visible(True)
+Gui.F_PrtCertEdit.fgActLot.Enabled(true)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("PrtCert2Edit_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3100_LOT_INFO.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_prtcertedit_unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.PrtCert2Edit.End
+
+program.sub.fgactlot_checkclick.start
+F.Intrinsic.Control.SetErrorHandler("fgactlot_checkclick_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iRow.Declare(Long)
+V.Local.sPrt.Declare(String)
+V.Local.sRecordO.Declare(String)
+V.Local.sRecord.Declare(String)
+V.Local.sPart.Declare(String)
+V.Local.sLoc.Declare(String)
+V.Local.sLot.Declare(String)
+V.Local.sBin.Declare(String)
+V.Local.sHeat.Declare(String)
+V.Local.sSerial.Declare(String)
+V.Local.sJob.Declare(String)
+V.Local.sSuffix.Declare(String)
+V.Local.sSqlUpdate.Declare(String)
+V.Local.sStat.Declare(String)
+
+'Populate Variables
+V.Local.iRow.Set(V.Screen.F_PrtCertEdit!fgActLot.Row)
+Gui.F_PrtCertEdit.fgActLot.GetTextMatrix(0,V.Local.iRow,V.Local.sPrt)
+Gui.F_PrtCertEdit.fgActLot.GetTextMatrix(1,V.Local.iRow,V.Local.sRecordO)
+F.Intrinsic.String.RPAD(V.Local.sRecordO,"0",4,V.Local.sRecord)
+Gui.F_PrtCertEdit.fgActLot.GetTextMatrix(2,V.Local.iRow,V.Local.sPart)
+Gui.F_PrtCertEdit.fgActLot.GetTextMatrix(3,V.Local.iRow,V.Local.sLoc)
+Gui.F_PrtCertEdit.fgActLot.GetTextMatrix(4,V.Local.iRow,V.Local.sLot)
+Gui.F_PrtCertEdit.fgActLot.GetTextMatrix(5,V.Local.iRow,V.Local.sBin)
+Gui.F_PrtCertEdit.fgActLot.GetTextMatrix(6,V.Local.iRow,V.Local.sHeat)
+Gui.F_PrtCertEdit.fgActLot.GetTextMatrix(7,V.Local.iRow,V.Local.sSerial)
+Gui.F_PrtCertEdit.fgActLot.GetTextMatrix(8,V.Local.iRow,V.Local.sJob)
+Gui.F_PrtCertEdit.fgActLot.GetTextMatrix(9,V.Local.iRow,V.Local.sSuffix)
+Gui.F_PrtCertEdit.fgActLot.GetTextMatrix(10,V.Local.iRow,V.Local.sStat)
+
+
+F.Intrinsic.String.Build("SELECT * FROM GCG_3100_LOT_INFO WHERE PCK_NO = '{0}' AND ORDER_NO = '{1}' AND ORDER_SHIP_NO = '{2}' AND ORDER_REC = '{3}' ",V.Global.sPckNo,V.Global.sOrder,V.Global.sOrderSuffix,V.Local.sRecord,V.Local.sSqlUpdate)
+F.Intrinsic.String.Build("{0}AND PART = '{1}' AND LOC = '{2}' AND LOT = '{3}' AND BIN = '{4}' AND HEAT = '{5}' ",V.Local.sSqlUpdate,V.Local.sPart,V.Local.sLoc,V.Local.sLot,V.Local.sBin,V.Local.sHeat,V.Local.sSqlUpdate)
+F.Intrinsic.String.Build("{0}AND SERIAL = '{1}' AND JOB = '{2}' AND SUFFIX = '{3}' ",V.Local.sSqlUpdate,V.Local.sSerial,V.Local.sJob,V.Local.sSuffix,V.Local.sSqlUpdate)
+
+F.ODBC.Connection!Conx.OpenLocalRecordsetRW("rstUpdStat",V.Local.sSqlUpdate)
+F.Intrinsic.Control.If(V.ODBC.conx!rstUpdStat.EOF,=,False)
+	'if the prt checkbox is 1 then add Print to the last column and set stat to 1
+	F.Intrinsic.Control.If(V.Local.sPrt,=,"1")
+		Gui.F_PrtCertEdit.fgActLot.TextMatrix(11,V.Local.iRow,"Print")
+		F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uLotEdit!ORDER_REC,V.Local.sRecordO,V.uGlobal.uLotEdit!PART,V.Local.sPart,V.uGlobal.uLotEdit!LOC,V.Local.sLoc,V.uGlobal.uLotEdit!LOT,V.Local.sLot,V.uGlobal.uLotEdit!BIN,V.Local.sBin,V.uGlobal.uLotEdit!HEAT,V.Local.sHeat,V.uGlobal.uLotEdit!SERIAL,V.Local.sSerial,V.uGlobal.uLotEdit!SEL,"1")
+		F.ODBC.Conx!rstUpdStat.Set!STAT("1")
+	F.Intrinsic.Control.Else
+		Gui.F_PrtCertEdit.fgActLot.TextMatrix(11,V.Local.iRow,"")
+		F.Intrinsic.Variable.UDTMultiSeekSet(V.uGlobal.uLotEdit!ORDER_REC,V.Local.sRecordO,V.uGlobal.uLotEdit!PART,V.Local.sPart,V.uGlobal.uLotEdit!LOC,V.Local.sLoc,V.uGlobal.uLotEdit!LOT,V.Local.sLot,V.uGlobal.uLotEdit!BIN,V.Local.sBin,V.uGlobal.uLotEdit!HEAT,V.Local.sHeat,V.uGlobal.uLotEdit!SERIAL,V.Local.sSerial,V.uGlobal.uLotEdit!SEL,"")
+		F.ODBC.Conx!rstUpdStat.Set!STAT("")
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conx!rstUpdStat.Update
+F.Intrinsic.Control.EndIf
+F.ODBC.conx!rstUpdStat.Close
+Gui.F_PrtCertEdit.fgActLot.Commit
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("fgactlot_checkclick_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3100_LOT_INFO.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_prtcertedit_unload)
+Function.Intrinsic.Control.EndIf
+
+program.sub.fgactlot_checkclick.End
+
+program.sub.f_prtcertedit_unload.start
+F.Intrinsic.Control.SetErrorHandler("f_prtcertedit_unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.ODBC.Connection!Conx.Close
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("f_prtcertedit_unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3100_LOT_INFO.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.End
+
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.f_prtcertedit_unload.End
+
+Program.Sub.subUDT_dccfill.Start
+F.Intrinsic.Control.SetErrorHandler("subUDT_dccfill_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iC.Declare(String)
+V.Local.sPart.Declare(String)
+V.Local.sLoc.Declare(String)
+V.Local.sLot.Declare(String)
+V.Local.sBIN.Declare(String)
+V.Local.sHeat.Declare(String)
+V.Local.sSerial.Declare(String)
+V.Local.sIDLink.Declare(String)
+V.Local.iIDLink.Declare(Long)
+V.Local.sSql.Declare(String)
+
+'cycles through the udt and checks to see if a DCC is associated
+F.Intrinsic.Control.For(V.Local.iC,0,V.uGlobal.uLotEdit.UBound,1)
+	V.Local.sPart.Set("")
+	V.Local.sLoc.Set("")
+	V.Local.sLot.Set("")
+	V.Local.sBIN.Set("")
+	V.Local.sHeat.Set("")
+	V.Local.sSerial.Set("")
+	F.Intrinsic.String.RPad(V.uGlobal.uLotEdit(V.Local.iC)!PART," ",20,V.Local.sPart)
+	F.Intrinsic.String.RPad(V.uGlobal.uLotEdit(V.Local.iC)!LOC," ",2,V.Local.sLoc)
+	F.Intrinsic.String.RPad(V.uGlobal.uLotEdit(V.Local.iC)!LOT," ",15,V.Local.sLot)
+	F.Intrinsic.String.RPad(V.uGlobal.uLotEdit(V.Local.iC)!BIN," ",6,V.Local.sBin)
+	F.Intrinsic.String.RPad(V.uGlobal.uLotEdit(V.Local.iC)!HEAT," ",15,V.Local.sHEAT)
+	F.Intrinsic.String.RPad(V.uGlobal.uLotEdit(V.Local.iC)!SERIAL," ",30,V.Local.sSerial)
+	F.Intrinsic.String.Build("{0}{1}{2}{3}{4}{5}",V.Local.sPart,V.Local.sLoc,V.Local.sLot,V.Local.sBIN,V.Local.sHeat,V.Local.sSerial,V.Local.sIDLink)
+	'get link id for 31 Item Master
+	F.Global.DocumentControl.GetLinkID(V.Local.sIDLink,31,V.Local.iIDLink)
+	F.Intrinsic.String.Build("SELECT PATH, FILE FROM ATG_DOC_ASSOC WHERE LINK_ID = '{0}' ",V.Local.iIDLink,V.Local.sSql)
+	F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstLFile",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.Conx!rstLFile.EOF,=,"False")
+		V.uGlobal.uLotEdit(V.Local.iC)!DCC.Set("True")
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conx!rstLFile.Close
+F.Intrinsic.Control.Next(V.Local.iC)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("subUDT_dccfill_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3100_LOT_INFO.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_prtcertedit_unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.subUDT_dccfill.End
+
+program.sub.fgactlot_mouseup.start
+F.Intrinsic.Control.SetErrorHandler("fgactlot_mouseup_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'COLUMN SORTING
+F.Intrinsic.Control.If(V.Args.mouserow,=,0)
+	F.Intrinsic.Control.If(V.Args.mousecol,>,0)
+		'if gab version is 1 than use normal sort column
+		F.Intrinsic.Control.If(V.Ambient.GABVersion.Left1,=,1)
+			Gui.F_PrtCertEdit.fgActLot.Visible(False)
+			Gui.F_PrtCertEdit.fgActLot.sortcolumn(V.Args.mousecol,0)
+			Gui.F_PrtCertEdit.fgActLot.Visible(True)
+		'if gab version is 2 then use .net enable column sort
+		F.Intrinsic.Control.Else
+			Gui.F_PrtCertEdit.fgActLot.EnableColumnSort(True,v.Args.mousecol)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("fgactlot_mouseup_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3100_LOT_INFO.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_prtcertedit_unload)
+Function.Intrinsic.Control.EndIf
+
+program.sub.fgactlot_mouseup.End
+
+program.sub.cmdprint_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdprint_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iC.Declare(String)
+V.Local.sPart.Declare(String)
+V.Local.sLoc.Declare(String)
+V.Local.sLot.Declare(String)
+V.Local.sBIN.Declare(String)
+V.Local.sHeat.Declare(String)
+V.Local.sSerial.Declare(String)
+V.Local.sIDLink.Declare(String)
+V.Local.iIDLink.Declare(Long)
+V.Local.sSql.Declare(String)
+V.Local.sPath.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.sSel.Declare(String)
+
+'cycles through the udt and prints all of the documents associated with it if sel is 1
+F.Intrinsic.Control.For(V.Local.iC,0,V.uGlobal.uLotEdit.UBound,1)
+	V.Local.sPart.Set("")
+	V.Local.sLoc.Set("")
+	V.Local.sLot.Set("")
+	V.Local.sBIN.Set("")
+	V.Local.sHeat.Set("")
+	V.Local.sSerial.Set("")
+
+	V.Local.sSel.Set(V.uGlobal.uLotEdit(V.Local.iC)!SEL)
+
+	F.Intrinsic.Control.If(V.Local.sSel,=,"1")
+		F.Intrinsic.String.RPad(V.uGlobal.uLotEdit(V.Local.iC)!PART," ",20,V.Local.sPart)
+		F.Intrinsic.String.RPad(V.uGlobal.uLotEdit(V.Local.iC)!LOC," ",2,V.Local.sLoc)
+		F.Intrinsic.String.RPad(V.uGlobal.uLotEdit(V.Local.iC)!LOT," ",15,V.Local.sLot)
+		F.Intrinsic.String.RPad(V.uGlobal.uLotEdit(V.Local.iC)!BIN," ",6,V.Local.sBin)
+		F.Intrinsic.String.RPad(V.uGlobal.uLotEdit(V.Local.iC)!HEAT," ",15,V.Local.sHEAT)
+		F.Intrinsic.String.RPad(V.uGlobal.uLotEdit(V.Local.iC)!SERIAL," ",30,V.Local.sSerial)
+		V.Local.sSel.Set(V.uGlobal.uLotEdit(V.Local.iC)!SEL)
+
+		'gets link id for 31 Item Master
+		F.Intrinsic.String.Build("{0}{1}{2}{3}{4}{5}",V.Local.sPart,V.Local.sLoc,V.Local.sLot,V.Local.sBIN,V.Local.sHeat,V.Local.sSerial,V.Local.sIDLink)
+		F.Global.DocumentControl.GetLinkID(V.Local.sIDLink,31,V.Local.iIDLink)
+		F.Intrinsic.String.Build("SELECT PATH, FILE FROM ATG_DOC_ASSOC WHERE LINK_ID = '{0}' ",V.Local.iIDLink,V.Local.sSql)
+		F.ODBC.Connection!conx.OpenRecordsetRO("rstLFile",V.Local.sSQL)
+		F.Intrinsic.Control.DoUntil(V.ODBC.conx!rstLFile.EOF,=,"True")
+		'prints all of the documents associated to the id
+			F.Intrinsic.String.Trim(V.ODBC.conx!rstLFile.FieldVal!PATH,V.Local.sPath)
+			F.Intrinsic.String.Trim(V.ODBC.conx!rstLFile.FieldVal!File,V.Local.sFile)
+			F.Intrinsic.String.Build("{0}{1}",V.Local.sPath,V.Local.sFile,V.Local.sFile)
+			F.Intrinsic.task.ShellExec(V.Caller.Handle,"PRINT",V.local.sFile,"","",5)
+			F.ODBC.conx!rstLFile.MoveNext
+		F.Intrinsic.Control.Loop
+		F.ODBC.conx!rstLFile.Close
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iC)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdprint_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3100_LOT_INFO.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_prtcertedit_unload)
+Function.Intrinsic.Control.EndIf
+
+program.sub.cmdprint_click.End
+
+program.sub.cmdaddzip_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdaddzip_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sCustPath.Declare(String)
+V.Local.sTargetFile.Declare(String)
+V.Local.sSourceFile.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.sPart.Declare(String)
+V.Local.sLoc.Declare(String)
+V.Local.sLot.Declare(String)
+V.Local.sBIN.Declare(String)
+V.Local.sHeat.Declare(String)
+V.Local.sSerial.Declare(String)
+V.Local.sSel.Declare(String)
+V.Local.sIDLink.Declare(String)
+V.Local.iIDLink.Declare(Long)
+V.Local.sFile.Declare(String)
+V.Local.sPath.Declare(String)
+V.Local.bExists.Declare(Boolean)
+
+'build zip file name
+F.Intrinsic.String.Build("{0}{1}{2}.zip",V.Global.sPckNo,V.Global.sOrder,V.Global.sOrderSuffix,V.Local.sTargetFile)
+F.Intrinsic.String.Build("SELECT CUSTOMER FROM V_SHIPMENT_HEADER WHERE ORDER_NO = '{0}' AND ORDER_SUFFIX = '{1}' ",V.Global.sOrder,V.Global.sOrderSuffix,V.Local.sSql)
+F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstGetCust",V.Local.sSQL)
+'if there is an order for shipment then select the customer from that order
+F.Intrinsic.Control.If(V.ODBC.conx!rstGetCust.EOF,=,"False")
+	F.Intrinsic.String.Build("SELECT PATH FROM GCG_3100_LOT_CUST WHERE CUST = '{0}' ",V.ODBC.conx!rstGetCust.FieldValTrim!CUSTOMER,V.Local.sSql)
+	F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstChkCust",V.Local.sSQL)
+	'if path exists than set it
+	F.Intrinsic.Control.If(V.ODBC.conx!rstChkCust.EOF,=,"False")
+		V.Local.sCustPath.Set(V.ODBC.Conx!rstChkCust.FieldValTrim!PATH)
+	F.Intrinsic.Control.EndIf
+	'if path does not exist than use the default customer's path
+	F.Intrinsic.Control.If(V.Local.sCustPath,=,"")
+		V.Local.sSQL.Set("Select PATH From GCG_3100_LOT_CUST WHERE CUST='000000'")
+		F.ODBC.Connection!conx.OpenRecordsetRO("rstGetPath",V.Local.sSQL)
+			F.Intrinsic.Control.If(V.ODBC.Conx!rstGetPath.EOF,=,"False")
+				V.Local.sCustPath.Set(V.ODBC.Conx!rstGetPath.FieldValTrim!PATH)
+			F.Intrinsic.Control.EndIf
+		F.ODBC.Conx!rstGetPath.Close
+	F.Intrinsic.Control.EndIf
+	'if there is no default customer than say there is an error and stop processing
+	F.Intrinsic.Control.If(V.Local.sCustPath,=,"")
+		F.Intrinsic.UI.Msgbox("Target Path doesn't exist","Add Zip process")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	F.ODBC.Conx!rstChkCust.Close
+	F.ODBC.conx!rstGetCust.Close
+F.Intrinsic.Control.EndIf
+
+'add the path to the zip name for a complete path
+F.Intrinsic.String.Build("{0}\{1}",V.Local.sCustPath,V.Local.sTargetFile,V.Local.sTargetFile)
+F.Intrinsic.Control.If(V.Local.sCustPath,<>,"")
+	'checks to see if the file already exists, if it does delete it
+	F.Intrinsic.File.Exists(V.Local.sTargetFile,V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists,=,True)
+		F.Intrinsic.File.DeleteFile(V.Local.sTargetFile)
+	F.Intrinsic.Control.EndIf
+	'adds all of the documents for each of the lines
+	F.Intrinsic.Control.For(V.Local.iC,0,V.uGlobal.uLotEdit.UBound,1)
+		V.Local.sSel.Set(V.uGlobal.uLotEdit(V.Local.iC)!SEL)
+		F.Intrinsic.Control.If(V.Local.sSel,=,"1")
+			F.Intrinsic.String.RPad(V.uGlobal.uLotEdit(V.Local.iC)!PART," ",20,V.Local.sPart)
+			F.Intrinsic.String.RPad(V.uGlobal.uLotEdit(V.Local.iC)!LOC," ",2,V.Local.sLoc)
+			F.Intrinsic.String.RPad(V.uGlobal.uLotEdit(V.Local.iC)!LOT," ",15,V.Local.sLot)
+			F.Intrinsic.String.RPad(V.uGlobal.uLotEdit(V.Local.iC)!BIN," ",6,V.Local.sBin)
+			F.Intrinsic.String.RPad(V.uGlobal.uLotEdit(V.Local.iC)!HEAT," ",15,V.Local.sHEAT)
+			F.Intrinsic.String.RPad(V.uGlobal.uLotEdit(V.Local.iC)!SERIAL," ",30,V.Local.sSerial)
+			V.Local.sSel.Set(V.uGlobal.uLotEdit(V.Local.iC)!SEL)
+			'creates the idlink for 31 which is for item master
+			F.Intrinsic.String.Build("{0}{1}{2}{3}{4}{5}",V.Local.sPart,V.Local.sLoc,V.Local.sLot,V.Local.sBIN,V.Local.sHeat,V.Local.sSerial,V.Local.sIDLink)
+			F.Global.DocumentControl.GetLinkID(V.Local.sIDLink,31,V.Local.iIDLink)
+			F.Intrinsic.String.Build("SELECT PATH, FILE FROM ATG_DOC_ASSOC WHERE LINK_ID = '{0}' ",V.Local.iIDLink,V.Local.sSql)
+			F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstLFile",V.Local.sSQL)
+			'gets the file and path for the link id and adds it to a zip.
+			F.Intrinsic.Control.DoUntil(V.ODBC.conx!rstLFile.EOF,=,"True")
+				F.Intrinsic.String.Trim(V.ODBC.conx!rstLFile.FieldVal!PATH,V.Local.sPath)
+				F.Intrinsic.String.Trim(V.ODBC.conx!rstLFile.FieldVal!File,V.Local.sFile)
+				F.Intrinsic.String.Build("{0}{1}",V.Local.sPath,V.Local.sFile,V.Local.sSourceFile)
+				F.Automation.Zip.Zip(V.Local.sSourceFile,V.Local.sTargetFile)
+				F.ODBC.conx!rstLFile.MoveNext
+			F.Intrinsic.Control.Loop
+			F.ODBC.conx!rstLFile.Close
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Next(V.Local.iC)
+	'gets link id for 45 which is Sales Order Master
+	F.Global.DocumentControl.GetLinkID(V.Global.sOrder,45,V.Local.iIDLink)
+	F.Intrinsic.Control.If(V.Local.iIDLink,<,1)
+		F.Global.DocumentControl.CreateReference(V.Global.sOrder,45,V.Local.iIDLink)
+	F.Intrinsic.Control.EndIf
+	F.Global.DocumentControl.AddDocument(V.Local.iIDLink,V.Local.sTargetFile,"Mat Cert Packet",1,"ZIP")
+	F.Intrinsic.UI.Msgbox("Zip File added","Material Cert Packet")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdaddzip_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3100_LOT_INFO.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_prtcertedit_unload)
+Function.Intrinsic.Control.EndIf
+
+program.sub.cmdaddzip_click.End
+
+program.sub.cmdopen_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdopen_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iC.Declare(String)
+V.Local.sPart.Declare(String)
+V.Local.sLoc.Declare(String)
+V.Local.sLot.Declare(String)
+V.Local.sBIN.Declare(String)
+V.Local.sHeat.Declare(String)
+V.Local.sSerial.Declare(String)
+V.Local.sIDLink.Declare(String)
+V.Local.iIDLink.Declare(Long)
+V.Local.sSql.Declare(String)
+V.Local.sPath.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.sSel.Declare(String)
+
+'cycles through the udt and if sel is 1 then open the document attached to it.
+F.Intrinsic.Control.For(V.Local.iC,0,V.uGlobal.uLotEdit.UBound,1)
+	V.Local.sSel.Set(V.uGlobal.uLotEdit(V.Local.iC)!SEL)
+
+	F.Intrinsic.Control.If(V.Local.sSel,=,"1")
+		F.Intrinsic.String.RPad(V.uGlobal.uLotEdit(V.Local.iC)!PART," ",20,V.Local.sPart)
+		F.Intrinsic.String.RPad(V.uGlobal.uLotEdit(V.Local.iC)!LOC," ",2,V.Local.sLoc)
+		F.Intrinsic.String.RPad(V.uGlobal.uLotEdit(V.Local.iC)!LOT," ",15,V.Local.sLot)
+		F.Intrinsic.String.RPad(V.uGlobal.uLotEdit(V.Local.iC)!BIN," ",6,V.Local.sBin)
+		F.Intrinsic.String.RPad(V.uGlobal.uLotEdit(V.Local.iC)!HEAT," ",15,V.Local.sHEAT)
+		F.Intrinsic.String.RPad(V.uGlobal.uLotEdit(V.Local.iC)!SERIAL," ",30,V.Local.sSerial)
+		V.Local.sSel.Set(V.uGlobal.uLotEdit(V.Local.iC)!SEL)
+
+		'gets link id for 31 Item Master, if they are the same open the file
+		F.Intrinsic.String.Build("{0}{1}{2}{3}{4}{5}",V.Local.sPart,V.Local.sLoc,V.Local.sLot,V.Local.sBIN,V.Local.sHeat,V.Local.sSerial,V.Local.sIDLink)
+		F.Global.DocumentControl.GetLinkID(V.Local.sIDLink,31,V.Local.iIDLink)
+		F.Intrinsic.String.Build("SELECT PATH, FILE FROM ATG_DOC_ASSOC WHERE LINK_ID = '{0}' ",V.Local.iIDLink,V.Local.sSql)
+		F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstLFile",V.Local.sSQL)
+		F.Intrinsic.Control.DoUntil(V.ODBC.conx!rstLFile.EOF,=,"True")
+		'opens all files for this id
+			F.Intrinsic.String.Trim(V.ODBC.conx!rstLFile.FieldVal!PATH,V.Local.sPath)
+			F.Intrinsic.String.Trim(V.ODBC.conx!rstLFile.FieldVal!File,V.Local.sFile)
+			F.Intrinsic.String.Concat(V.Local.sPath,V.Local.sFile,V.Local.sFile)
+			F.Intrinsic.task.ShellExec(V.Caller.Handle,"OPEN",V.local.sFile,"","",5)
+			F.ODBC.conx!rstLFile.MoveNext
+		F.Intrinsic.Control.Loop
+		F.ODBC.conx!rstLFile.Close
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iC)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdopen_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3100_LOT_INFO.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_prtcertedit_unload)
+Function.Intrinsic.Control.EndIf
+
+program.sub.cmdopen_click.End
+
+Program.Sub.PrtCert2MainP.Start
+F.Intrinsic.Control.SetErrorHandler("PrtCert2MainP_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSQL.Declare(String)
+V.Local.sOrder_Rec.Declare(String)
+V.Local.sPart.Declare(String)
+V.Local.sLocation.Declare(String)
+V.Local.sLot.Declare(String)
+V.Local.sBin.Declare(String)
+V.Local.sHeat.Declare(String)
+V.Local.sSerial.Declare(String)
+
+'------------------------ Search on V_SHIPMENT_LINES View for Order and Suffix------------------------------------------------------------------------
+F.Intrinsic.String.Build("SELECT PART, LOCATION, ORDER_REC FROM V_SHIPMENT_LINES WHERE ORDER_NO = '{0}' AND ORDER_SUFFIX = '{1}' ",V.Global.sOrder,V.Global.sOrderSuffix,V.Local.sSQL)
+F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstShipLn",V.Local.sSQL)
+F.Intrinsic.Control.DoUntil(V.ODBC.conx!rstShipLn.EOF,=,"True")
+	V.Local.sPart.Set(V.ODBC.conx!rstShipLn.FieldVal!PART)
+	V.Local.sLocation.Set(V.ODBC.conx!rstShipLn.FieldVal!LOCATION)
+	V.Local.sOrder_Rec.Set(V.ODBC.conx!rstShipLn.FieldVal!ORDER_REC)
+'------------------------ Search on ORDER_HIST_LOT View for Order and Suffix------------------------------------------------------------------------
+	F.Intrinsic.String.Build("SELECT LOT, BIN, HEAT, SERIAL FROM ORDER_HIST_LOT WHERE ORDER_NO = '{0}' AND ORDER_SUFFIX = '{1}' AND ORDER_LINE = '{2}' ",V.Global.sOrder,V.Global.sOrderSuffix,V.Local.sOrder_Rec,V.Local.sSQL)
+	F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstOrdHistLot",V.Local.sSQL)
+	V.Local.sLot.Set(V.ODBC.conx!rstOrdHistLot.FieldVal!LOT)
+	V.Local.sBin.Set(V.ODBC.conx!rstOrdHistLot.FieldVal!BIN)
+	V.Local.sHeat.Set(V.ODBC.conx!rstOrdHistLot.FieldVal!HEAT)
+	V.Local.sSerial.Set(V.ODBC.conx!rstOrdHistLot.FieldVal!SERIAL)
+	F.ODBC.conx!rstOrdHistLot.Close
+'------------------------ Add Main part to the Print List------------------------------------------------------------------------
+	F.Intrinsic.String.Build("SELECT * FROM GCG_3100_LOT_LBHS WHERE TERMINAL = '{0}' AND ORDER_REC = '{1}' AND PART = '{2}' AND LOCATION = '{3}' AND LOT = '{4}' AND BIN = '{5}' AND HEAT = '{6}' AND SERIAL = '{7}' ",V.Caller.Terminal,V.Local.sOrder_Rec,V.Local.sPart,V.Local.sLocation,V.Local.sLot,V.Local.sBin,V.Local.sHeat,V.Local.sSerial,V.Local.sSQL)
+	F.ODBC.Connection!conx.OpenLocalRecordsetRW("rstChkMain",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.conx!rstChkMain.EOF,=,"True")
+		F.ODBC.conx!rstChkMain.AddNew
+		F.ODBC.conx!rstChkMain.Set!Terminal(V.Caller.Terminal)
+		F.ODBC.conx!rstChkMain.Set!ID(1)
+		F.ODBC.conx!rstChkMain.Set!PART(V.Local.sPart)
+		F.ODBC.conx!rstChkMain.Set!LOCATION(V.Local.sLocation)
+		F.ODBC.conx!rstChkMain.Set!LOT(V.Local.sLot)
+		F.ODBC.conx!rstChkMain.Set!BIN(V.Local.sBin)
+		F.ODBC.conx!rstChkMain.Set!HEAT(V.Local.sHeat)
+		F.ODBC.conx!rstChkMain.Set!SERIAL(V.Local.sSerial)
+		F.ODBC.conx!rstChkMain.Set!JOB("")
+		F.ODBC.conx!rstChkMain.Set!SUFFIX("")
+		F.ODBC.conx!rstChkMain.Set!CODE_TRANSACTION("MAN")
+		F.ODBC.conx!rstChkMain.Set!SEQUENCE("999999")
+		F.ODBC.conx!rstChkMain.Set!ORDER_REC(V.Local.sOrder_Rec)
+		F.ODBC.conx!rstChkMain.Set!CHK("Y")
+		F.ODBC.conx!rstChkMain.Update
+	F.Intrinsic.Control.Else
+		F.ODBC.conx!rstChkMain.Set!ID(1)
+		F.ODBC.conx!rstChkMain.Update
+	F.Intrinsic.Control.EndIf
+	F.ODBC.conx!rstChkMain.Close
+	F.ODBC.conx!rstShipLn.MoveNext
+F.Intrinsic.Control.Loop
+F.ODBC.conx!rstShipLn.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("PrtCert2MainP_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3100_LOT_INFO.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_prtcertedit_unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.PrtCert2MainP.End
+
+Program.Sub.Comments.Start
+${$0$}$GAB_LOT_INFO$}$Strider$}$04/01/2013$}$False
+${$1$}$$}$$}$7$}$28532$}$Post-Save Hook$}$04/10/2013 8:51:31 AM$}$(Program: ORD0FSGI?; Screen: OES0FSN)
+
+${$1$}$$}$$}$6$}$37832$}$Script 3 Hook$}$04/09/2013 10:00:31 AM$}$(Program: SHP205; Screen: SHP205S)
+
+${$1$}$$}$$}$5$}$37831$}$Script 2 Hook$}$04/09/2013 9:59:51 AM$}$(Program: SHP205; Screen: SHP205S)
+
+${$1$}$$}$$}$4$}$37810$}$Populate Hook$}$04/09/2013 9:59:28 AM$}$(Program: SHP205; Screen: SHP205S)
+
+${$1$}$$}$$}$3$}$25984$}$OES099 Script Button 3$}$04/09/2013 9:59:12 AM$}$(Program: ORD099GI; Screen: OES099)
+
+${$1$}$$}$$}$2$}$25982$}$OES099 Script Button 2$}$04/09/2013 9:58:13 AM$}$(Program: ORD099GI?; Screen: OES099)
+
+${$1$}$$}$$}$0$}$25910$}$OES099 Populate Hook$}$04/09/2013 9:56:41 AM$}$(Program: ORD099GI?; Screen: OES099)
+
+${$2$}$$}$$}$1$}$4$}$SQL$}$12/07/2015 10:44:33 AM$}$GCG_3100_LOT_CUST
+GCG_3100_LOT_INFO
+GCG_3100_LOT_LBHS
+${$2$}$$}$$}$0$}$2$}$Gab$}$12/07/2015 10:43:36 AM$}$GCG_3100_LOT_CUST.GAS
+${$3$}$0$}$$}$0$}$-1$}$$}$12:00:00 AM$}$Material Certifications can be opened, printed or zipped to DCC from the Packing List.
+
+Original project GAB_LOT_CUST.gas and GAB_LOT_INFO.gas
+Project 828 from the ARC
+${$4$}$0$}$$}$0$}$-1$}$RRC$}$09/30/2013 3:57:22 PM$}$Fixed an issue with multiple shipment lines
+Program.Sub.Comments.End
+
